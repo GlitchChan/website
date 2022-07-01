@@ -1,0 +1,12 @@
+{% extends 'base.jinja2' %}
+{% block body %}
+<div class="hero min-h-screen bg-midnight-100">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">Welcome To <span class="text-baelz-100"><img src="{{ url_for('static', filename='waifutech.png') }}" alt="Waifu Tech Logo"></span></h1>
+      <p class="py-4">This website is still under development so stay tuned!</p>
+      <p class="py-6">While you wait why not join <strong><a class="link text-baelz-100" href="https://discord.gg/ZxbYHEh">our server!</a></strong></p>
+    </div>
+  </div>
+</div>
+{% endblock body %}

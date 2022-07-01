@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.gif') }}" />
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta property="og:site_name" content="{{ appname }}">
+    <meta name="twitter:image" content="/static/favicon.gif" />
+    <title>{{ page }} | Waifu Tech</title>
+</head>
+<body>
+<div class="navbar bg-midnight-200 drop-shadow-xl">
+    <div class="flex-1">
+      <a href="/" class="btn btn-ghost normal-case text-xl">
+          <img width="100" height="100" src="{{ url_for('static', filename='waifutech.png') }}" alt="Waifu Tech Logo">
+      </a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal p-0 text-primary-content">
+          <li><a href="/">About</a></li>
+          <li><a href="/">Projects</a></li>
+          <li><a href="/">Services</a></li>
+          <li><a href="https://discord.gg/ZxbYHEh">Discord</a></li>
+          <li><a href="https://liberapay.com/GlitchyChan/donate">Donate</a></li>
+      </ul>
+    </div>
+</div>
+{% block body %}{% endblock %}
+
+<footer class="footer-center p-4 bg-midnight-200 text-primary-content drop-shadow-xl">
+    <div>
+        <p>
+            Copyright © 2022 - All right reserved by WaifuTech <br>
+            Made with ❤ by <a class="link text-baelz-100" href="https://github.com/glitchychan">Glitchy</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
