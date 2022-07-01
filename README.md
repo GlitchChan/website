@@ -5,16 +5,14 @@
 </h1>
 
 <h4 align="center"><b>A personal website for my projects and upcoming services</b></h4>
-<h1 align="center">
+<p align="center">
     <a href="https://liberapay.com/GlitchyChan/donate">
         <img src="https://img.shields.io/badge/Liberapay-F6C915?style=for-the-badge&logo=liberapay&logoColor=black">
     </a>
         <a href="https://discord.gg/ZxbYHEh">
         <img src="https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=fff&style=for-the-badge">
     </a>
-    <a href="http"
-</h1>
-
+</p>
 
 ## **About**
 This is a personal website project that will be for showing off my projects, privacy services, and upcoming api (maybe).
