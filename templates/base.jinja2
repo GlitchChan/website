@@ -1,34 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-midnight-100">
 <head>
+    {# Pretty formatting for Discord #}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Waifu Tech" />
+    <meta property="og:description" content="Privacy focused weeb site" />
+    <meta property="og:url" content="https://waifutech.moe" />
+    <meta property="og:image" content="{{ url_for('static', filename='waifutech.png') }}" />
+    <meta data-react-helmet="true" name="theme-color" content="#dd2a62" />
+
+    {# Twitter formatting #}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@glitchychan" />
+
+    {# Basic Heading stuff #}
     <link rel="icon" href="{{ url_for('static', filename='favicon.gif') }}" />
     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8">
-    <meta property="og:site_name" content="{{ appname }}">
-    <meta name="twitter:image" content="/static/favicon.gif" />
-    <title>{{ page }} | Waifu Tech</title>
+    <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-<div class="navbar bg-midnight-200 drop-shadow-xl">
-    <div class="flex-1">
-      <a href="/" class="btn btn-ghost normal-case text-xl">
-          <img width="100" height="100" src="{{ url_for('static', filename='waifutech.png') }}" alt="Waifu Tech Logo">
-      </a>
-    </div>
-    <div class="flex-none">
-      <ul class="menu menu-horizontal p-0 text-primary-content">
+<div class="navbar bg-midnight-200 shadow-xl">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-midnight-200 rounded-box w-52 z-10">
           <li><a href="/">About</a></li>
-          <li><a href="/">Projects</a></li>
+          <li><a href="/projects">Projects</a></li>
           <li><a href="/">Services</a></li>
           <li><a href="https://discord.gg/ZxbYHEh">Discord</a></li>
           <li><a href="https://liberapay.com/GlitchyChan/donate">Donate</a></li>
       </ul>
     </div>
+    <a href="/" class="btn btn-ghost normal-case text-xl">
+        <img width="100" height="100" src="{{ url_for('static', filename='waifutech.png') }}" alt="Waifu Tech Logo">
+    </a>
+  </div>
+
+  <div class="navbar-end hidden lg:flex">
+    <ul tabindex="0" class="menu menu-horizontal p-0">
+        <li><a href="/">About</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/">Services</a></li>
+        <li><a href="https://discord.gg/ZxbYHEh">Discord</a></li>
+        <li><a href="https://liberapay.com/GlitchyChan/donate">Donate</a></li>
+    </ul>
+  </div>
 </div>
+
 {% block body %}{% endblock %}
 
-<footer class="footer-center p-4 bg-midnight-200 text-primary-content drop-shadow-xl">
+<footer class="footer-center p-4 bg-midnight-200 text-neutral-content drop-shadow-xl">
     <div>
         <p>
             Copyright © 2022 - All right reserved by WaifuTech <br>
