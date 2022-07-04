@@ -1,6 +1,6 @@
 <h1 align="center">
     <a href="https://github.com/GlitchChan/WaifuTechBot">
-        <img src="./static/waifutech.png">
+        <img src="./.github/readme_logo.png">
     </a>
 </h1>
 
