@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-midnight-100">
+<html lang="en" data-theme="rosepine">
 <head>
     {# Pretty formatting for Discord #}
     <meta property="og:type" content="website">
@@ -21,43 +21,78 @@
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-<div class="navbar bg-midnight-200 shadow-xl">
+{#  <div class="navbar shadow-xl bg-neutral">#}
+{#      <div class="navbar-start">#}
+{#        <a href="/" class="btn btn-ghost normal-case text-xl">#}
+{#            <img width="100" height="100" src="{{ url_for('static', filename='waifutech.png') }}" alt="Waifu Tech Logo">#}
+{#        </a>#}
+{#      </div>#}
+{#      <div class="dropdown navbar-end">#}
+{#        <label tabindex="0" class="btn btn-ghost lg:hidden">#}
+{#            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>#}
+{#        </label>#}
+{#        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">#}
+{#            <li><a href="/">About</a></li>#}
+{#            <li><a href="/projects">Projects</a></li>#}
+{#            <li><a href="/">Services</a></li>#}
+{#            <li><a href="https://discord.gg/ZxbYHEh">Discord</a></li>#}
+{#            <li><a href="https://liberapay.com/GlitchyChan/donate">Donate</a></li>#}
+{#         </ul>#}
+{#      </div>#}
+{##}
+{#      <div class="navbar-end hidden lg:flex">#}
+{#        <ul tabindex="0" class="menu menu-horizontal p-0">#}
+{#            <li><a href="/">About</a></li>#}
+{#            <li><a href="/projects">Projects</a></li>#}
+{#            <li><a href="/">Services</a></li>#}
+{#            <li><a href="https://discord.gg/ZxbYHEh">Discord</a></li>#}
+{#            <li><a href="https://liberapay.com/GlitchyChan/donate">Donate</a></li>#}
+{#        </ul>#}
+{#      </div>#}
+{#  </div>#}
+<div class="navbar shadow-xl bg-neutral">
   <div class="navbar-start">
-    <div class="dropdown">
-      <label tabindex="0" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </label>
-      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-midnight-200 rounded-box w-52 z-10">
-          <li><a href="/">About</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/">Services</a></li>
-          <li><a href="https://discord.gg/ZxbYHEh">Discord</a></li>
-          <li><a href="https://liberapay.com/GlitchyChan/donate">Donate</a></li>
-      </ul>
-    </div>
-    <a href="/" class="btn btn-ghost normal-case text-xl">
+    <a class="btn btn-ghost normal-case text-xl">
         <img width="100" height="100" src="{{ url_for('static', filename='waifutech.png') }}" alt="Waifu Tech Logo">
     </a>
   </div>
-
-  <div class="navbar-end hidden lg:flex">
-    <ul tabindex="0" class="menu menu-horizontal p-0">
+  <div class="navbar-end">
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal p-0">
+            <li><a href="/">About</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="https://discord.gg/ZxbYHEh">Discord</a></li>
+            <li><a href="https://liberapay.com/GlitchyChan/donate">Donate</a></li>
+        </ul>
+    </div>
+  </div>
+  <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
+      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
         <li><a href="/">About</a></li>
         <li><a href="/projects">Projects</a></li>
         <li><a href="/">Services</a></li>
         <li><a href="https://discord.gg/ZxbYHEh">Discord</a></li>
         <li><a href="https://liberapay.com/GlitchyChan/donate">Donate</a></li>
-    </ul>
+      </ul>
   </div>
 </div>
 
 {% block body %}{% endblock %}
 
-<footer class="footer-center p-4 bg-midnight-200 text-neutral-content drop-shadow-xl">
+<footer class="footer-center p-4 text-neutral-content bg-neutral">
     <div>
         <p>
             Copyright © 2022 - All right reserved by WaifuTech <br>
-            Made with ❤ by <a class="link text-baelz-100" href="https://github.com/glitchychan">Glitchy</a>
+            Made with <strong>{
+            <svg class="w-5 h-5 inline fill-neutral-content" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Jinja2</title><path d="M23.718.668l-.08.04s-4.563 2.174-8.244 2.651c-1.854.24-4.554.481-6.964.62a65.472 65.472 0 0 1-3.254.117c-.917.005-1.63-.032-1.95-.11a20.19 20.19 0 0 1-2.4-.732l-.252-.1.346 1.172-.92.81.248.436.44.033 1.052.131.162.514.635.057.318 1.078.092.006s1.338.115 1.762.115c.365 0 .93-.04 1.072-.05l.024.396.287.054v.315l-.8.71.157.028c-.14.01-.227.018-.5.03-.43.017-.934.02-1.203-.018-.586-.086-.71-.086-.71-.086H2.98l-.122.13-.046.446h.152l.055 1.111 2.933-.113-.205 3.682-.02.347-2.242-.127-.02-.761h.538l.057-.42.464-.106.223-.312-2.111-.51-1.705.506.465.388h.166l.025.334.494.028v.763l-.611.157.19.404.105.068v.825h.343v3.296l-.566.086.098 1.247.334.056-.055 2.342 1.803.033-.32-2.303 1.982-.048-.14 1.087-.25 1.032 2.609.033.027-2.28 1.322-.12-.072 1.294-.063.99h1.633l-.053-2.3.176.027.067-1.392h-.243l-.058-.34-.131-1.29.049-1.364h.295v-1.182l-.364.027.04-.806.43-.043.023-.352.172-.025.51-.389-1.827-.375-1.71.379.286.469.239-.02.054-.004.034.442.41-.02.004.674-1.526-.035.053-.877.059-.926v-1.213l.048-1.152 3.485-.178 4.155-.24.033.674-.152 1.949-.063 1.693-1.32-.023-.006-1.018.574-.021.028-.373.27-.041-.012-.057.152-.01.29-.388-2.01-.471-1.986.426.258.45.14-.01v.089h.246v.402l.524.008-.006.856h-.527l-.014.505.187.022-.021.978.393.02-.044 3.615-.523.108.016.423h.176v.985h.289l-.07 1.205-.112 1.314 2.17.057-.07-1.172-.138-.848-.022-.593 1.325-.024-.04 1.002-.009 1.33 1.033.082 1.252-.05.533-.157-.25-.76-.053-1-.08-.583 1.233-.045-.057.742-.006 1.515.738.069.631-.016.416-.13-.187-1.424-.049-.862.25-.027.006-.895.08-.017-.027-.43h-.303l-.049-.527-.023-2.692.222-.006v-.902l.096.014v-.461l-.334-.027.006-.836.57-.051-.033-.362.26-.021-.024-.117.58-.29-2.056-.413-1.88.38.231.432.223-.02.014.077h.203l.011.426.547-.006.035.773-1.67-.012-.212-1.457-.178-.826-.145-1.469.075-.746 3.847-.293.012-1.316.201-.05-.023-.38-.239-.138h-.037l-.357.05-.793.116a62.157 62.157 0 0 1-1.625.216l-.19.02-.015-.178-.785-.41.006-.275.271-.008.02-.672c.09-.006.352-.024.771-.062.484-.045 1.04-.105 1.361-.18.597-.14 1.452-.28 1.452-.28l.076-.013.408-1.108.805-.234.066-.184 1.78-.492.306-.252-.717-1.564.047-.236.344-.18.297-.906-.252-.223zM14.825 6.73l-.01.526.407.017-.016.32-.789.518-.086.258-1.86.09.01-.184.112-.18.01-.154.001-.228.067-.156.031-.16v-.092l.08-.323zm-5.18.461l-.043.264.199.234-.014.387.176.27-.047.328.025.035-1.847.074.02-.152-.653-.354-.022-.345.29-.014.029-.598zm4.014 8.5l1.258.082-.05 1.938.183 1.54-1.34-.046-.05-3.514zm-10.225.084l2.16.112L5.4 17.17v1.219l.137.523-2.09.098zm15.376.01v3.256l-1.29.094-.052-1.723-.158-1.592zm-11.494.076l1.538.006.017 2.996-1.43.026-.076-.928-.006-1.047z"/></svg>
+            <svg class="w-5 h-5 inline fill-neutral-content" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Tailwind CSS</title><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>
+            <svg class="w-5 h-5 inline fill-neutral-content" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Python</title><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>
+            <svg class="w-5 h-5 inline fill-neutral-content" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Love</title><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 01-.686 0 16.709 16.709 0 01-.465-.252 31.147 31.147 0 01-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0114 20.408z"></path></svg>
+            }</strong> by <a class="link text-baelz-100" href="https://github.com/glitchychan">Glitchy</a>
         </p>
     </div>
 </footer>
