@@ -2,21 +2,21 @@
 module.exports = {
   content: ["./templates/*.jinja2"],
   daisyui: {
-      themes: [
-        {
-          main: {
-            "primary": '#761D3A',
-            "secondary": "#D926A9",
-            "accent": "#1FB2A6",
-            "neutral": "#191D24",
-            "base-100": "#2A303C",
-            "info": "#3ABFF8",
-            "success": "#36D399",
-            "warning": "#FBBD23",
-            "error": "#f43f5e",
-          },
+    themes: [
+      {
+        rosepine: {
+          "primary": "#c4a7e7",
+          "secondary": "#ea9a97",
+          "accent": "#c4a7e7",
+          "neutral": "#2a273f",
+          "base-100": "#232136",
+          "info": "#3e8fb0",
+          "success": "#9ccfd8",
+          "warning": "#f6c177",
+          "error": "#eb6f92",
         },
-      ],
+      },
+    ],
   },
   plugins: [require('daisyui')],
   theme: {
