@@ -1,14 +1,14 @@
 [tool.poetry]
 name = "waifutech"
 version = "0.1.0"
-description = ""
+description = "A website for the org WaifuTech"
 authors = ["glitchy <thepatheticweebgamer@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Flask = {extras = ["async"], version = "^2.1.2"}
 PyGithub = "^1.55"
 python-dotenv = "^0.20.0"
+quart = "^0.17.0"
 
 [tool.poetry.dev-dependencies]
 
