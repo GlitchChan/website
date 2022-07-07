@@ -3,12 +3,13 @@
 {% block body %}
     <div class="grid lg:grid-cols-4 md:grid-cols-2 min-h-screen place-items-center">
     {% for repo in repos %}
+        {% set image = get_readme_image(repo) %}
         <div class="card w-96 h-96 card-compact shadow-xl bg-neutral mb-4 mt-4">
-            {% if get_readme_image(repo) %}
-                <figure class="h-52"><img src="{{ get_readme_image(repo) }}" alt="Repo Image" /></figure>
-            {% else %}
-                <figure class="h-52"></figure>
-            {% endif %}
+            <figure class="h-52">
+                {% if image %}
+                    <img src="{{ image }}", alt="Repo Image" />
+                {% endif %}
+            </figure>
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{{ repo.name }}</h2>
                 <p>{{ repo.description }}</p>
